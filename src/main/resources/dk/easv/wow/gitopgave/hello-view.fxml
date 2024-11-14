@@ -1,16 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.geometry.Point3D?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="dk.easv.wow.gitopgave.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Sphere?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+<VBox alignment="CENTER" prefHeight="519.0" prefWidth="215.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.wow.gitopgave.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <children>
+
+          <Label fx:id="welcomeText" />
+          <Button layoutX="13.0" layoutY="5.0" onAction="#onHelloButtonClick" text="Hello!" />
+         <Button layoutX="59.0" layoutY="59.0" onAction="#onHelloButtonClick" text="Hello!" />
+         <Button layoutY="65.0" onAction="#onHelloButtonClick" text="Hello!" />
+         <Button layoutX="110.0" layoutY="13.0" onAction="#onHelloButtonClick" text="Hello!" />
+         <Button layoutX="13.0" layoutY="33.0" onAction="#onHelloButtonClick" text="Hello!" />
+         <Button layoutX="110.0" layoutY="59.0" onAction="#onHelloButtonClick" text="Hello!" />
+         <Button layoutX="48.0" onAction="#onHelloButtonClick" text="Hello!" />
+         <Button layoutX="37.0" layoutY="65.0" onAction="#onHelloButtonClick" text="Hello!" />
+         <Button layoutX="110.0" layoutY="-4.0" onAction="#onHelloButtonClick" text="Hello!" />
+         <Button layoutX="-10.0" layoutY="46.0" onAction="#onHelloButtonClick" text="Hello!" />
+         <Button layoutX="72.0" layoutY="33.0" onAction="#onHelloButtonClick" text="Hello!" />
+      </children>
+      <effect>
+         <MotionBlur />
+      </effect>
+   </AnchorPane>
+   <Box depth="100" height="100" rotate="49.8" width="100">
+      <rotationAxis>
+         <Point3D x="1.0" y="1.0" z="1.0" />
+      </rotationAxis>
+   </Box>
+   <AnchorPane prefHeight="367.0" prefWidth="175.0">
+      <children>
+         <Sphere layoutX="88.0" layoutY="55.0" radius="50" rotate="108.4">
+            <rotationAxis>
+               <Point3D x="1.0" y="1.0" z="1.0" />
+            </rotationAxis>
+         </Sphere>
+      </children>
+      <effect>
+         <Reflection />
+      </effect>
+   </AnchorPane>
+   <Polygon fill="DODGERBLUE" points="-50.0, 40.0, 124.4000244140625, -8.000018119812012, 0.0, -60.0" rotate="108.4" stroke="BLACK" strokeType="INSIDE">
+      <rotationAxis>
+         <Point3D x="1.0" y="1.0" z="1.0" />
+      </rotationAxis>
+   </Polygon>
+
+    <Button onAction="#onHelloButtonClick" stylesheets="" text="Hello!" />
 </VBox>
